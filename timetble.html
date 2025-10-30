@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Management - Spring 2</title>
+  <style>
+    body { font-family: Arial; text-align: center; margin-top: 30px; }
+    h1 { color: green; }
+    button { padding: 5px 10px; margin: 5px; background: green; color: white; border: none; }
+    input { margin: 5px; padding: 5px; }
+    table { margin: 10px auto; border-collapse: collapse; width: 50%; }
+    td, th { border: 1px solid black; padding: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Student Management - Spring</h1>
+  <h2>Online Portal</h2>
+
+  <button onclick="showProfile()">Profile</button>
+  <button onclick="showTimetable()">Time Table</button>
+
+  <div id="profile">
+    <p>Name: <input type="text"></p>
+    <p>Class: <input type="text"></p>
+    <p>Roll No: <input type="text"></p>
+    <button>Login</button>
+  </div>
+
+  <div id="timetable" style="display:none;">
+    <h3>Time Table</h3>
+    <table>
+      <tr><th>Day</th><th>Subject</th></tr>
+      <tr><td>Monday</td><td>Maths</td></tr>
+      <tr><td>Tuesday</td><td>Science</td></tr>
+      <tr><td>Wednesday</td><td>English</td></tr>
+      <tr><td>Thursday</td><td>Social</td></tr>
+      <tr><td>Friday</td><td>Games</td></tr>
+    </table>
+  </div>
+
+  <script>
+    function showTimetable() {
+      document.getElementById('timetable').style.display = 'block';
+      document.getElementById('profile').style.display = 'none';
+    }
